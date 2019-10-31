@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>SciTrk</title>
+    <link type="text/css" rel="stylesheet" href="scitrkstyles.css"/>
+    <script type="text/javascript"  src="js/scitrk.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+    </script>
+</head>
+
+<form>
+
+<myTitle>SciTrk</myTitle>
+
+<!--- Search options for different use cases --->
+<div id="search" class="soption">
+
+<form>
+    <p>
+    <select id="searchoption"  name="options" class="soption" onchange="changeClass(this.value)" style="width:250px">
+	<option value="">Search type</option>
+    <option value="location">Search for training locations</option>
+    <option value="field">Search for people in field</option>
+    <option value="family">Search for students' current locations</option>
+    </select>
+    </p>
+ </form>
+
+<br>
+<p>
+
+<form class="form">
+
+<!-- Search by name -->
+  <div id="searchname">
+    <span class="header">Name: </span>
+    <input id="name" type="text"/>
+  </div>
+
+<!-- Search for location by field -->
+  <div id="searchfield">
+    <span class="header">Field:</span>
+    <input id="field" type="text"/><br>
+      <span class="header">Miles:</span>
+      <input id="distance" type="number" min="1" max="5000" step="1" value="60"/><br>
+    <span class="header"> from institution: </span> <input id="currentInstitution" type="text"/><br>
+
+  </div>
+
+<br>
+    <div class="visible">
+    <input type="button" value="Submit" onclick="getTable()"/>
+        <input type="reset" value="Reset"/>
+    </div>
+</p>
+</form>
+
+<div id="results_div"></div>
+<div class="form" id="loadingImg"> 
+<img src="loadingImg.gif" alt="Loading" style="width:50px;height:50px;">
+</div>
+</div>
+
+
+<!-- map -->
+<p>
+<div id="map"></div>
+<div id="legend"><h3>Legend</h3></div>
+</p>
+
+<br>
+<br>
+<p class="footer">
+Created by Jon Schor and Ling Guo at UCSF as part of BMI217. Thanks to <a href="https://neurotree.org/neurotree/">Neurotree</a> for providing database information.
+</p>
+
+
+</body>
+</html>
+
