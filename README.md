@@ -11,7 +11,7 @@ Web app created for scientific software development class at UCSF
 ![screenshot](screenshot.png)
 
 ## Contributors
-Jointly developed and created by Ling Guo and Jon Schor. 
+Jointly developed and created by Ling Guo and Jon Schor in 2017. 
 
 ## Disclaimer
 Some code/sections were omitted for security/privacy reasons. 
